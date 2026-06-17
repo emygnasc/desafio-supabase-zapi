@@ -19,13 +19,11 @@ def main():
         try:
             resposta = enviar_mensagem(
                 telefone,
-                mensagem,
-                modo_teste=True
+                mensagem
             )
 
-            print(
-                f"Mensagem para {nome}"
-            )
+            print(f"Mensagem para {nome} | STATUS: {resposta.status_code}")
+            print(f"Resposta: {resposta.text}")
 
         except Exception as ERRO:
             print(
